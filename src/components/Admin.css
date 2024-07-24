@@ -1,0 +1,38 @@
+/* Admin.css */
+.admin-container {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    min-height: 100vh;
+  }
+  
+  .admin-title {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+  }
+  
+  .admin-subtitle {
+    color: #555;
+  }
+  
+  .donations-table {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .donations-table thead {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .donations-table th, .donations-table td {
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  @media (max-width: 768px) {
+    .donations-table {
+      font-size: 0.9rem;
+    }
+  }
+  

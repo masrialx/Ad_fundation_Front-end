@@ -1,0 +1,116 @@
+/* Posts.css */
+
+/* Container Styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Alert Styles */
+.alert {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown Styles */
+.dropdown-toggle {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.dropdown-toggle:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.dropdown-menu {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+.form-control {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.form-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Preview Styles */
+.post-media-preview {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 50%;
+  margin-top: 10px;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.post-media-preview:hover {
+  transform: scale(1.05);
+}
+
+/* Social Media Icons */
+.social-media-form {
+  margin-top: 20px;
+}
+
+.social-media-icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.social-media-icons a {
+  color: #333;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-media-icons a:hover {
+  color: #007bff;
+  transform: scale(1.1);
+}
+
+/* Posts List */
+.posts-list {
+  margin-top: 20px;
+}
+
+.post-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .form-control {
+    font-size: 14px;
+  }
+
+  .social-media-icons a {
+    font-size: 20px;
+  }
+
+  .post-item {
+    padding: 15px;
+  }
+}

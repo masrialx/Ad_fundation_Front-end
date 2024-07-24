@@ -1,0 +1,69 @@
+/* Home.css */
+.home-container {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    width: 100;
+    border-radius: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    height: 90vh;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .home-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+  
+  .carousel-container {
+   
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .carousel-item img {
+    height: 90vh;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 1rem;
+  }
+  
+  .carousel-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .carousel-text {
+    color: #ddd;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Ensure smooth and seamless 3D effect */
+  .carousel-item {
+    perspective: 1000px;
+  }
+  
+  .carousel-inner {
+    transform-style: preserve-3d;
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-title {
+      font-size: 1.5rem;
+    }
+  
+    .carousel-text {
+      font-size: 1rem;
+    }
+  }
+  

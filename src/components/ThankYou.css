@@ -1,0 +1,84 @@
+/* ThankYou.css */
+
+/* General container styling */
+.thank-you-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f4f8;
+    padding: 20px;
+  }
+  
+  /* Thank you message styling */
+  .thank-you-message {
+    margin-bottom: 20px;
+  }
+  
+  .thank-you-message h1 {
+    font-size: 48px;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .thank-you-message p {
+    font-size: 20px;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .thank-you-message .btn {
+    margin-top: 20px;
+  }
+  
+  /* Animation container styling */
+  .animation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+  
+  /* Heart animation styling */
+  .heart {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    transform: rotate(-45deg);
+    animation: pulse 1.5s infinite;
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+  }
+  
+  .heart::before {
+    left: 0;
+  }
+  
+  .heart::after {
+    left: 50px;
+  }
+  
+  /* Pulse animation */
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+  }
+  

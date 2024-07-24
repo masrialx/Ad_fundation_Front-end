@@ -1,0 +1,98 @@
+/* components/Footer.css */
+
+.footer-container {
+  background: #343a40;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Ensure that items wrap on smaller screens */
+}
+
+.footer-section {
+  flex: 1;
+  padding: 0 20px;
+  min-width: 200px; /* Ensure a minimum width to maintain readability */
+}
+
+.footer-section h3 {
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+  color: #d1d1d1;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 10px;
+}
+
+.social-media {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-media a {
+  color: #d1d1d1;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-media a:hover {
+  color: #007bff;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #007bff;
+  padding-top: 10px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #d1d1d1;
+}
+
+/* Media Query for screens 600px or less */
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center; /* Center content */
+  }
+
+  .footer-section {
+    padding: 10px 0; /* Adjust padding for smaller screens */
+    text-align: center; /* Center text */
+  }
+
+  .footer-section h3 {
+    font-size: 1.2rem; /* Adjust font size */
+  }
+
+  .footer-section p,
+  .footer-section ul,
+  .footer-section li {
+    font-size: 0.9rem; /* Adjust font size */
+  }
+}

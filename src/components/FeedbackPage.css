@@ -1,0 +1,22 @@
+/* components/FeedbackPage.css */
+
+.feedback-container {
+    padding: 40px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+  }
+  
+  .feedback-container h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #007bff;
+  }
+  
+  .feedback-container .alert {
+    margin-bottom: 20px;
+  }
+  
+  .feedback-container .form-control {
+    margin-bottom: 20px;
+  }
+  
