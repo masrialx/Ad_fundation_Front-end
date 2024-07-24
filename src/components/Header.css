@@ -1,97 +1,103 @@
-Main container for the header
 .header {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    padding: 0.5rem 1rem;
-    background: linear-gradient(135deg, #1a2a6c, #b21f1f);
-    border-radius: 15px;
-    transform-style: preserve-3d;
-    transition: background 0.3s ease, transform 0.3s ease;
-  }
-  
-  /* Header hover effect for a more dynamic 3D appearance */
-  .header:hover {
-    background: linear-gradient(135deg, #1a2a6c, #b21f1f);
-  
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-  }
-  
-  /* Brand styling */
-  .brand {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease, transform 0.3s ease;
-    transform-style: preserve-3d;
-  }
-  
-  /* Brand hover effect with a scaling and glowing effect */
-  .brand:hover {
-    color: #ffd700; /* Gold color for hover effect */
-    /* transform: scale(1.25) rotateY(-10deg); */
-    text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
-  }
-  
-  /* Navigation link styling */
-  .nav-link {
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin: 0 10px;
-    position: relative;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  
-  /* Navigation link hover effect with a rotation and underline animation */
-  .nav-link::before {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #ffd700;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease;
-  }
-  
-  .nav-link:hover::before {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-    color: #ffd700; /* Gold color for hover effect */
-    text-shadow: 0 0 8px rgba(255, 215, 0, 0.6); /* Optional glow effect */
-  }
-  
-  /* Navbar toggler styling */
-  .navbar-toggler {
-    border: 2px solid #ffd700; /* Gold color for the toggle button border */
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    border-radius: 5px;
-  }
-  
-  .navbar-toggler:hover {
-    background-color: rgba(255, 215, 0, 0.2); /* Light gold background on hover */
-    transform: rotate(180deg) scale(1.1);
-  }
-  
-  /* Navbar toggler icon */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+  border-radius: 15px;
+  transform-style: preserve-3d;
+  position: fixed;
+  width: 100%;
+  top: -100px; /* Initial position hidden */
+  z-index: 1000;
+  transition: top 0.3s ease-in-out, background 0.5s, box-shadow 0.5s; /* Include 'top' in the transition */
+}
 
-  /* Responsive design for smaller screens */
-  @media (max-width: 768px) {
-    .header {
-      padding: 0.5rem;
-      border-radius: 10px;
-    }
-  
-    .brand {
-      font-size: 1.5rem;
-    }
-  
-    .nav-link {
-      font-size: 1rem;
-      margin: 0 5px;
-    }
+.header.visible {
+  top: 0px; /* Slide down to visible position */
+}
+
+.header.hidden {
+  top: -100px; /* Slide up to hidden position */
+}
+
+.header:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  transition: transform 0.5s, background 0.5s, box-shadow 0.5s;
+}
+
+.brand {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.brand:hover {
+  color: #ffd700;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0 10px;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffd700;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  color: #ffd700;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+}
+
+.navbar-toggler {
+  border: 2px solid #ffd700;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.navbar-toggler:hover {
+  background-color: rgba(255, 215, 0, 0.2);
+  transform: rotate(180deg) scale(1.1);
+}
+
+.toggler-icon {
+  color: #ffd700;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0.5rem;
+    border-radius: 10px;
   }
-  
+
+  .brand {
+    font-size: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    margin: 0 5px;
+  }
+}
